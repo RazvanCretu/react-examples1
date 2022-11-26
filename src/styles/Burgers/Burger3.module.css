@@ -1,0 +1,60 @@
+.Burger {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Burger span {
+    position: absolute;
+    width: 36px;
+    height: 5px;
+    border-radius: 6px;
+    background-color: white;
+    transition: .5s ease-in-out;
+}
+
+.Burger :nth-child(odd) {
+    transition-delay: 0.3s;
+}
+
+.Burger :nth-child(even) {
+    transform: scale(0.2);
+}
+
+.Burger :nth-child(1) {
+    transform: translateY(-200%);
+}
+
+.Burger :nth-child(5) {
+    transform: translateY(200%);
+}
+
+.Burger :nth-child(1).open {
+    transition-delay: 0s;
+    transform: translateY(0%) scale(0.2);
+}
+
+.Burger :nth-child(2).open {
+    transition-delay: 0.3s;
+    transform: rotate(-45deg)  scale(1);
+}
+
+.Burger :nth-child(3).open {
+    transition-delay: 0s;
+    transform: scale(0.2);
+}
+
+.Burger :nth-child(4).open {
+    transition-delay: 0.3s;
+    transform: rotate(45deg) scale(1);
+}
+
+.Burger :nth-child(5).open {
+    transition-delay: 0s;
+    transform: translateY(0%) scale(0.2);
+}
+
