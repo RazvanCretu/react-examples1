@@ -52,17 +52,17 @@
 .Button::before {
     content: "";
     height: 4px;
-    width: 100%;
+    width: 0%;
     left: 0;
     bottom: 0;
     position: absolute;
     background: greenyellow;
-    transform: scaleY(0);
+    transition-property: width;
     transition: .7s;
 }
 
 .Wrapper.open .Button::before{
-    transform: scaleY(1);
+    width: 100%;
 }
 
 .Menu {

@@ -14,23 +14,3 @@ code {
     monospace;
 }
 
-@keyframes rotRight {
-  0% {
-      transform: rotate(50deg);
-      opacity: 0;
-  }
-  100% {
-      transform: rotate(0deg);
-      opacity: 1;
-  }
-}
-@keyframes rotLeft {
-  0% {
-      transform: rotate(-50deg);
-      opacity: 0;
-  }
-  100% {
-      transform: rotate(0deg);
-      opacity: 1;
-  }
-}
