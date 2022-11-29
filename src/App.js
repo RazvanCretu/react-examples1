@@ -5,6 +5,7 @@ import Burger3 from "./components/Burgers/Burger3";
 import Burger4 from "./components/Burgers/Burger4";
 import Dropdown1 from "./components/Dropdowns/Dropdown1";
 import Dropdown2 from "./components/Dropdowns/Dropdown2";
+import Input1 from "./components/Inputs/Input1";
 import Container from "./components/Container";
 import styles from "./styles/App.module.css";
 
@@ -29,7 +30,9 @@ function App() {
       <Container>
         <Dropdown2 />
       </Container>
-      <Container></Container>
+      <Container>
+        <Input1 />
+      </Container>
       <Container></Container>
     </div>
   );

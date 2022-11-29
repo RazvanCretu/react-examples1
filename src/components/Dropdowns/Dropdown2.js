@@ -40,7 +40,7 @@ const Dropdown2 = ({ isOpen, handleSwitch }) => {
     }
   };
 
-  const animate = (i) => `${0.1 * i}s`;
+  const animate = (i) => `${0.2 * i}s`;
 
   return (
     <div className={styles.Wrapper} ref={containerRef}>
@@ -54,7 +54,7 @@ const Dropdown2 = ({ isOpen, handleSwitch }) => {
       <CSSTransition
         nodeRef={menuRef}
         in={isOpen}
-        timeout={1300}
+        timeout={1600}
         unmountOnExit
         classNames={{
           enterActive: styles.enter,
