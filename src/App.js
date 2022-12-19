@@ -5,7 +5,9 @@ import Burger3 from "./components/Burgers/Burger3";
 import Burger4 from "./components/Burgers/Burger4";
 import Dropdown1 from "./components/Dropdowns/Dropdown1";
 import Dropdown2 from "./components/Dropdowns/Dropdown2";
+import Dropdown3 from "./components/Dropdowns/Dropdown3";
 import Input1 from "./components/Inputs/Input1";
+import ProfilePage from "./pages/Profile";
 import { ReactComponent as Blob1 } from "./components/Blobs/Blob1.svg";
 import Container from "./components/Container";
 import styles from "./styles/App.module.css";
@@ -36,8 +38,10 @@ function App() {
       </Container>
       <Container>
         <Blob1 />
-        {/* <Blob1 /> */}
       </Container>
+      <Container>{/* <Dropdown3 /> */}</Container>
+      <Container></Container>
+      <ProfilePage />
     </div>
   );
 }
