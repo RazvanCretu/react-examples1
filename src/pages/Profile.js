@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Box, Button, TextField } from "@mui/material";
+import { Container, Box, Button, TextField } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-const ContainerBox = styled(Box)((theme) => ({
+const ContainerBox = styled(Box)({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -12,13 +12,19 @@ const ContainerBox = styled(Box)((theme) => ({
   width: "80%",
   backgroundColor: "white",
   borderRadius: 5,
-}));
+  "& .MuiTextField-root": {
+    marginBottom: "1rem",
+  },
+  "& .MuiBox-root": {
+    marginBottom: "1rem",
+  },
+});
 
-const StyledButton = styled(Button)((theme) => ({
+const StyledButton = styled(Button)({
   position: "absolute",
   top: 20,
   right: 50,
-}));
+});
 
 const ProfilePage = () => {
   const [isEditing, setIsEditing] = useState(false);
@@ -28,9 +34,9 @@ const ProfilePage = () => {
     address: "St. Hall of Fame 1, NY",
   });
 
-  const handleEditClick = (e) => setIsEditing(true);
-  const handleCancelClick = (e) => setIsEditing(false);
-  const handleSaveClick = (e) => {
+  const handleEditClick = () => setIsEditing(true);
+  const handleCancelClick = () => setIsEditing(false);
+  const handleSaveClick = () => {
     setIsEditing(false);
   };
 
@@ -41,9 +47,9 @@ const ProfilePage = () => {
   };
 
   return (
-    <Box
+    <Container
+      disableGutters
       sx={{
-        width: "100%",
         height: 600,
         display: "flex",
         alignItems: "center",
@@ -66,7 +72,7 @@ const ProfilePage = () => {
             label="Username"
             variant="standard"
             onChange={handleChange}
-            focused={user.username}
+            focused={user.username !== ""}
           />
           <TextField
             type="email"
@@ -75,7 +81,7 @@ const ProfilePage = () => {
             label="Email"
             variant="standard"
             onChange={handleChange}
-            focused={user.email}
+            focused={user.email !== ""}
           />{" "}
           <TextField
             value={user.address}
@@ -83,7 +89,7 @@ const ProfilePage = () => {
             label="Address"
             variant="standard"
             onChange={handleChange}
-            focused={user.address}
+            focused={user.address !== ""}
           />
           <Button
             sx={{
@@ -107,7 +113,7 @@ const ProfilePage = () => {
           </StyledButton>
         </ContainerBox>
       )}
-    </Box>
+    </Container>
   );
 };
 
